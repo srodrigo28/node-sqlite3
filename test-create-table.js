@@ -10,7 +10,6 @@ const initDB = databaseFile => new Promise((resolve, reject) => {
         }
     })
 })
-
 const run = (db, query) => new Promise((resolve, reject) => {
     db.run(query, err => {
         if(err){
@@ -20,7 +19,6 @@ const run = (db, query) => new Promise((resolve, reject) => {
         }
     })
 })
-
 const createTable = async() => {
     const db = await initDB('banco2.sqlite3')
     await run(db, `
